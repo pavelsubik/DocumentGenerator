@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "DocumentGeneratorFunction": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "httpPort": 32951,
+      "useSSL": false
+    }
+  }
+}
