@@ -39,8 +39,11 @@ namespace DocumentGeneratorFunction.Processors
                 Headless = true
             });
             var page = await browser.NewPageAsync();
-            await page.SetContentAsync(render);
+            // await page.SetContentAsync(render);
             //var result = await page.GetContentAsync();
+            
+            await page.GoToAsync("data:text/html," + render, WaitUntilNavigation.Networkidle0);
+            await page.SetContentAsync(render);
 
             byte[] pdf;
             if (options != null)
